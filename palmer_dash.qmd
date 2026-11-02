@@ -37,20 +37,19 @@ ggplotly(bill_by_island)
 
 ```{r}
 #| title: Flipper Length by Mass
-ggplot(penguins, aes(body_mass_g, flipper_length_mm, color = species)) +
+flipper_by_mass <- ggplot(penguins, aes(body_mass_g, flipper_length_mm, color = species)) +
   geom_point()
 
+ggplotly(flipper_by_mass)
 ```
 
 ```{r}
 #| title: Bill Length by Mass
-ggplot(penguins, aes(body_mass_g, bill_length_mm, color = species)) +
+bill_by_mass <- ggplot(penguins, aes(body_mass_g, bill_length_mm, color = species)) +
   geom_point()
 
+ggplotly(bill_by_mass)
 ```
-
-
- 
 
 # Page 2
 
