@@ -66,3 +66,45 @@ list(
 ```{r}
 
 ```
+
+1.  **Design the Ultimate Candy.** Which ingredients show up in the winners? Compare ingredient frequency in the top 20 vs. the bottom 20, and end with your “recipe.”
+
+## Filter top 20 and bottom 20
+
+```{r}
+
+top <- candy %>% 
+  slice_max(winpercent, n = 20)
+
+low <- candy %>% 
+  slice_min(winpercent, n = 20)
+  
+
+  
+
+```
+
+```{r}
+
+low_ans <- low %>% 
+  summarise(across(c(chocolate, fruity, caramel, peanutyalmondy, nougat, crispedricewafer), ~ sum(.x, na.rm = TRUE)
+                   ))
+
+low_ans
+```
+
+```{r}
+
+top_ans <- top %>% 
+  summarise(across(c(chocolate, fruity, caramel, peanutyalmondy, nougat, crispedricewafer), ~ sum(.x, na.rm = TRUE)
+                   ))
+
+top_ans
+
+```
+
+```{r}
+
+
+
+```
